@@ -5,7 +5,7 @@ import SearchEmoji from "./SearchEmoji";
 
 
 
-const EmojiSelector = ({ props, inputRef }) => {
+const EmojiSelector = ({ props, inputRef ,containerRef}) => {
     const [emojis] = useEmoji();
     const [showEmoji, setShowEmoji] = useState(false);
     const [emojisList, setEmojisList] = useState();
@@ -23,36 +23,35 @@ const EmojiSelector = ({ props, inputRef }) => {
 
     }
 
+  
     //cancel the window if clicked outside 
-    window.onclick = function (ev) {
-       console.log(ev.target.className)
-        if (ev.target.className !== "emojisContainer" && ev.target.className !== "emojisBtn" &&
-         ev.target.className !== "emoji" && ev.target.className !== "messageInput" && ev.target.className !== "searchContainer" &&
-         ev.target.className !== "searchContainer-input"
-          ) 
-         {
-            console.log("no")
-            setShowEmoji(false);
-        }
-    };
+        window.addEventListener('click', e =>{
+            if(!containerRef.current.contains(e.target)){
+                setShowEmoji(false);
+                console.log("no")
+            }
+        })
 
 
     function emojiClicked(e) {
+        setTimeout(()=>{
+            const emoji = e.target.outerText;
+            /* let old = inputRef.current.value;
+             inputRef.current.value = old + emoji;*/
+    
+            const cursorPos = inputRef.current.selectionStart;
+            const text = inputRef.current.value;
+            const prev = text.slice(0, cursorPos);
+            const next = text.slice(cursorPos);
+    
+            //set the crusor where it was 
+            inputRef.current.value = prev + emoji + next;
+            inputRef.current.selectionStart = cursorPos + emoji.length;
+            inputRef.current.selectionEnd = cursorPos + emoji.length;
+            inputRef.current.focus();
+        },500);
 
-        const emoji = e.target.outerText;
-        /* let old = inputRef.current.value;
-         inputRef.current.value = old + emoji;*/
-
-        const cursorPos = inputRef.current.selectionStart;
-        const text = inputRef.current.value;
-        const prev = text.slice(0, cursorPos);
-        const next = text.slice(cursorPos);
-
-        //set the crusor where it was 
-        inputRef.current.value = prev + emoji + next;
-        inputRef.current.selectionStart = cursorPos + emoji.length;
-        inputRef.current.selectionEnd = cursorPos + emoji.length;
-        inputRef.current.focus();
+     
     }
 
     return (
@@ -61,7 +60,7 @@ const EmojiSelector = ({ props, inputRef }) => {
             {showEmoji ? <div className="emojisContainer">
                 <SearchEmoji searchEmoji={searchEmoji}/>
                 <div className="emojiCell">{emojisList ? emojisList.map((it) => {
-                    return <p className="emoji" id="emoji" onClick={emojiClicked} style={{ display: "inline" }}>{it.emoji}</p>
+                    return <p key={it.name} className="emoji" id="emoji" onClick={emojiClicked} style={{ display: "inline" }}>{it.emoji}</p>
                 }) : ""}</div>
             </div> : ""
             }

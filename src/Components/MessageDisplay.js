@@ -7,7 +7,7 @@ const MessageDisplay = ({message}) => {
         <div className="messagesDisplay">
            {message? <div>
             <p>{message}</p>
-           </div>:"Type something "}
+           </div>:"😃😄😁🥰😇🙃😜😛😋"}
 
         </div>
      );
