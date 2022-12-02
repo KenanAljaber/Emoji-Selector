@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&display=swap');
+.editor-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-radius: 100px;
+    background: #a6d5aa;
+    width: 60%;
+    
+}
+
+/* Cool scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  display: block
+}
+::-webkit-scrollbar-thumb {
+  background: #e4eaf5;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(196, 201, 211)
+}
+
+.sendImg{
+    width: 19px;
+    background-color: #C4C9D3;
+    padding: 10px;
+    border-radius: 180px;
+    margin-left: 10px;
+}
+
+.messageInput{
+    padding: 10px;
+    border-style: none;
+    border-radius: 20px;
+    width: 80%;
+}
+input{
+    font-family: Heebo;
+}
+  
+ input:focus-visible{
+    outline: none;
+}
+
+@media (max-width: 500px) {
+  .editor-container{
+    width: 90%;
+  }
+}
