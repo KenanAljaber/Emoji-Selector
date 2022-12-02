@@ -27,7 +27,7 @@ useRef and useState.
 
  ### Setup
 
- - Clone this repo using `git clone https://github.com/Kenoisplaying/weatherApp`
+ - Clone this repo using `git clone https://github.com/Kenoisplaying/Emoji-Selector`
 
  ### Commands
 
