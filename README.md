@@ -6,7 +6,7 @@
 
 # Preview of the website
 
-<img src="./src/assets/weatherApp.png"/>
+<img src="./src/assets/screen.png"/>
 
 >Emoji selector is a simple applicaiton that give you a list of emojis 
 useRef and useState.
@@ -27,7 +27,7 @@ useRef and useState.
 
  ### Setup
 
- - Clone this repo using `git clone https://github.com/Kenoisplaying/weatherApp`
+ - Clone this repo using `git clone https://github.com/Kenoisplaying/Emoji-Selector`
 
  ### Commands
 
