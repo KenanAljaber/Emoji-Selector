@@ -6,7 +6,7 @@
 
 # Preview of the website
 
-<img src="./src/assets/weatherApp.png"/>
+<img src="./src/assets/screen.png"/>
 
 >Emoji selector is a simple applicaiton that give you a list of emojis 
 useRef and useState.
