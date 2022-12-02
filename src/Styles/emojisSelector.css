@@ -28,3 +28,11 @@
     background: #202124;
     margin-left: 10px;
 }
+
+@media (max-width: 500px) {
+    .emojisContainer{
+        margin-left: -200px;
+    }
+    
+  
+  }
