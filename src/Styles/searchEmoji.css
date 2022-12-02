@@ -1,0 +1,19 @@
+.searchContainer{
+    padding: 0px 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.searchContainer input{
+    width: 90%;
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px;
+}
+.searchContainer input:focus-visible{
+    outline: none;
+}
+
+.searchContainer img{
+
+}
