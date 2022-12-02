@@ -37,10 +37,10 @@ export const useEmoji =()=>{
             };
             acumulator.push(emoji);
             return acumulator;
-
-
         },[]);
         return emojisArr;
     }
+
+    
     return [emojisList];
 }

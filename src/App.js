@@ -7,8 +7,8 @@ function App() {
 
 
   return (
-    <div className="App" style={{textAlign:"center"}}>
-      <h1 style={{background:"#202124",marginBottom:"50px",color:"#d3f9ff",display:"inline-block",padding:"10px",borderRadius:"10px"}}>Emoji Selector</h1>
+    <div className="App" style={{textAlign:"center",marginTop:"10%"}}>
+      <h1 style={{background:"#B01321",marginBottom:"50px",color:"#FFE1E4",display:"inline-block",padding:"10px",borderRadius:"10px"}}>Emoji Selector</h1>
       <div className="sendBar-container">
        <Editor/>
        </div>
