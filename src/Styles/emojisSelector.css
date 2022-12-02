@@ -1,0 +1,30 @@
+.emoji{
+  
+    padding: 2px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.emoji:hover{
+    background-color: #C4C9D3;
+    border-radius: 20px;
+}
+.emojisContainer{
+    background: #202124;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    padding: 5px;
+    overflow-x: hidden;
+    margin-left: 25px;
+    z-index: 10;
+    position: absolute;
+}
+
+.emojisBtn{
+    border-radius: 180px;
+    border-style: none;
+    font-size: 19px;
+    background: #202124;
+    margin-left: 10px;
+}

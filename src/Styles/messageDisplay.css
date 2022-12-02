@@ -1,0 +1,9 @@
+.messagesDisplay{
+    background: #a6cfd5;
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 30px auto;
+    max-width: 500px;
+    border-radius: 50px;
+}
